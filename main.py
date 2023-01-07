@@ -172,5 +172,3 @@ class uploader:
         r = requests.get(f"https://xello.blue/api/download-config", headers=headers)
         open(f"config.sxcu", "wb").write(requests.get("https://xello.blue"+r.json()["url"], headers=headers).content)
         return r
-
-account.change_username("helloworld")
